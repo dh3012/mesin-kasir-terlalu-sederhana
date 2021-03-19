@@ -1,0 +1,28 @@
+import java.util.Scanner;
+import java.lang.String;
+    public class Main 
+    {
+      public static void main(String[] args)
+      {
+       Scanner input = new Scanner(System.in);
+      System.out.print("masukan nama barang: ");
+      String namaBarang = input.next();
+      System.out.print("masukan harga barang: ");
+      int harga = input.nextInt();
+      System.out.print("masukan jumlah barang: ");
+       int jumlah = input.nextInt();
+       int hargaTotal = harga * jumlah;
+
+      System.out.print("masukan diskon: ");
+      int diskon = input.nextInt();
+
+      if(diskon > 0){
+       int hargaTerakhir =hargaTotal - ((diskon * hargaTotal) / 100) ;
+       System.out.println("total harga = " + hargaTerakhir);
+      }else{
+        System.out.println("total harga = " + hargaTotal); 
+      }
+      
+      
+    }
+  }
